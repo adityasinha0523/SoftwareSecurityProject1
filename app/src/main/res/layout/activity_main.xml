@@ -7,6 +7,25 @@
     tools:context=".MainActivity">
 
     <TextView
+        android:id="@+id/time"
+        android:layout_width="98dp"
+        android:layout_height="29dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="296dp"
+        android:layout_marginTop="9dp"
+        android:text="Text View" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="32dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="239dp"
+        android:layout_marginTop="6dp"
+        android:text="Time is:" />
+
+    <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
