@@ -19,16 +19,22 @@ public class MainActivity extends AppCompatActivity {
     private Button broadcastButton;
     private Button serviceButton;
     private Button contentButton;
-    private TextView time;
+    private TextView time,broadCastMessage,testing;
+    public static String globalBroadcast = null;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        broadCastMessage= (TextView) findViewById(R.id.broadCastMessage);
+
         broadcastButton = (Button) findViewById(R.id.broadCastButton);
+       // testing = (TextView) findViewById(R.id.testing);
         broadcastButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                globalBroadcast=broadCastMessage.getText().toString();
+                //testing.setText(globalBroadcast);
                 broadcastActivityEvent();
             }
         });
@@ -58,9 +64,9 @@ public class MainActivity extends AppCompatActivity {
         time.setText(formatdateArray[3]);
 
 
-
     }
     private void broadcastActivityEvent() {
+
         Intent intent = new Intent(this, BroadcastActivity.class);
         startActivity(intent);
     }
