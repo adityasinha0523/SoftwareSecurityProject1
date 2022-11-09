@@ -13,6 +13,7 @@ import android.content.ServiceConnection;
 import com.example.myapplication.BoundService.MyLocalBinder;
 import android.view.View;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class ServiceActivity extends AppCompatActivity {
 
@@ -24,6 +25,7 @@ public class ServiceActivity extends AppCompatActivity {
         String currentTime = myService.getCurrentTime();
         TextView myTextView = (TextView)findViewById(R.id.myTextView);
         myTextView.setText(currentTime);
+        Toast.makeText(this, "Service Started! ", Toast.LENGTH_SHORT).show();
     }
 
     @Override

@@ -22,8 +22,7 @@ public class BoundService extends Service {
 
     public String getCurrentTime() {
         SimpleDateFormat dateformat =
-                new SimpleDateFormat("HH:mm",
-                        Locale.US);
+                new SimpleDateFormat("HH:mm", Locale.US);
         return (dateformat.format(new Date()));
     }
 
