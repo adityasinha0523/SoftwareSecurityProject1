@@ -7,16 +7,35 @@
     tools:context=".ServiceActivity">
 
     <TextView
-        android:layout_width="206dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
-        android:layout_centerVertical="true"
-        android:layout_marginStart="85dp"
-        android:text="Service Activity Page"
+        android:layout_alignParentEnd="true"
+        android:layout_centerInParent="true"
+        android:layout_marginStart="97dp"
+        android:layout_marginEnd="108dp"
+        android:text="Hello World!"
+        android:id="@+id/myTextView"
         android:textAlignment="center"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="188dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/myTextView"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="109dp"
+        android:layout_marginEnd="114dp"
+        android:layout_marginBottom="252dp"
+        android:text="@string/show_time"
+        android:onClick="showTime"
+        android:textAlignment="center" />
 
 </RelativeLayout>
