@@ -1,5 +1,19 @@
 <resources>
-    <string name="app_name">My Application</string>
+    <string name="app_name">Project Part 1 Question 1</string>
     <string name="show_time">SHOW TIME</string>
-    <string name="hello_world">BOUND SERVICE. PRESS BUTTON TO SHOW TIME:</string>
+    <string name="hello_world">PRESS BUTTON TO SHOW TIME</string>
+    <string name="stop_service">Stop Service</string>
+    <string name="status">Status:</string>
+    <string name="broadcast">Broadcast</string>
+    <string name="service">Service</string>
+    <string name="content">Content</string>
+    <string name="name_aditi_narendran">Name: Aditi Narendran</string>
+    <string name="name_preethi_shankar">Name: Preethi Shankar</string>
+    <string name="name_aditya_sinha">Name:Aditya Sinha</string>
+    <string name="time_is">Time is:</string>
+    <string name="enter_message">Enter Message</string>
+    <string name="binding">Binding.....</string>
+    <string name="unbinding">Unbinding....</string>
+    <string name="connecting">Connecting to Service.</string>
+    <string name="disconnecting">Disconnected from Service.</string>
 </resources>
