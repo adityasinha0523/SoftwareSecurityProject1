@@ -26,16 +26,17 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        broadCastMessage= (TextView) findViewById(R.id.broadCastMessage);
+        //broadCastMessage= (TextView) findViewById(R.id.broadCastMessage);
 
         broadcastButton = (Button) findViewById(R.id.broadCastButton);
        // testing = (TextView) findViewById(R.id.testing);
         broadcastButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                globalBroadcast=broadCastMessage.getText().toString();
+               // globalBroadcast=broadCastMessage.getText().toString();
                 //testing.setText(globalBroadcast);
-                broadcastActivityEvent();
+               broadcastActivityEvent();
+
             }
         });
         serviceButton = (Button) findViewById(R.id.serviceButton);
@@ -52,7 +53,9 @@ public class MainActivity extends AppCompatActivity {
                 contentActivityEvent();
             }
         });
-
+        /*
+            Function to show the time ont the screen.
+         */
         Date date = Calendar.getInstance().getTime();
         String formatdate= date.toString();
         String []formatdateArray= formatdate.split(" ");
@@ -65,12 +68,12 @@ public class MainActivity extends AppCompatActivity {
 
 
     }
-    private void broadcastActivityEvent() {
-
-        Intent intent = new Intent(this, BroadcastActivity.class);
-        startActivity(intent);
+    private void broadcastActivityEvent(){
+        Intent intent = new Intent();
+        intent.setAction("com.example.homework");
+        intent.setFlags(Intent.FLAG_INCLUDE_STOPPED_PACKAGES);
+        sendBroadcast(intent);
     }
-
     private void serviceActivityEvent() {
         Intent intent = new Intent(this, ServiceActivity.class);
         startActivity(intent);
